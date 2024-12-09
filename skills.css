@@ -1,0 +1,239 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #16161a;
+  color: #fffffe;
+  font-family: 'Kanit', sans-serif;
+  line-height: 1.6;
+  padding-top: 60px; /* To prevent navbar overlap */
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #fffffe;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover {
+  color: #7f5af0;
+}
+
+p {
+  color: #d1d5db;
+}
+
+/* Navbar Styling */
+.topnav {
+  background-color: #222;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  font-size: 18px;
+  text-align: center;
+}
+
+.topnav a {
+  display: inline-block;
+  padding: 18px 30px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.topnav a:hover {
+  background-color: #7f5af0;
+  color: #fff;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/* Mobile Menu */
+@media screen and (max-width: 700px) {
+  .topnav a:not(:first-child) { display: none; }
+  .topnav a.icon {
+      display: block;
+  }
+
+  .topnav.responsive {
+      position: relative;
+  }
+
+  .topnav.responsive a {
+      display: block;
+      text-align: left;
+  }
+
+  .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px; /* Increased space from navbar */
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about .section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* Increased gap for better spacing */
+  flex-wrap: wrap;
+  margin-bottom: 40px; /* Added margin to separate sections */
+}
+
+.about img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.about .text {
+  color: #fff;
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  padding: 0 20px; /* Added padding for text to avoid touching edges */
+}
+
+.about p {
+  font-size: 20px;
+  color: #d1d5db;
+  line-height: 1.8;
+  margin-top: 20px; /* Added margin for separation */
+}
+
+.about p strong {
+  color: #7f5af0; /* Emphasize keywords */
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px; /* Added margin for separation */
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1000px) {
+  .about {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about .section {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .logo {
+      justify-content: center;
+      gap: 15px;
+  }
+
+  .about img {
+      width: 200px; /* Slightly smaller on smaller screens */
+      height: 200px;
+  }
+
+  .about .text {
+      font-size: 16px; /* Slightly smaller text for smaller screens */
+      padding: 0 10px;
+  }
+
+  .about p {
+      font-size: 18px;
+      text-align: center;
+  }
+}
+
+/* Small Screen Adjustments */
+@media only screen and (max-width: 700px) {
+  .topnav {
+      font-size: 16px;
+      text-align: center;
+  }
+
+  .about .text {
+      font-size: 16px;
+  }
+
+  .logo {
+      gap: 10px;
+  }
+
+  .about p {
+      margin: 20px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .topnav {
+      font-size: 14px;
+  }
+
+  .about .text {
+      font-size: 14px;
+  }
+
+  .about p {
+      font-size: 16px;
+  }
+}
+
+/* Hover Effect for Links */
+a:hover {
+  background-color: #7f5af0;
+  color: white;
+}
